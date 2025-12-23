@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <style>
+    body {
+      background-image: url("image1fruits/cratenewbg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      padding-top: 180px;
+      font-family: sans-serif;
+    }
+    h1 {
+      color: green;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: orange;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+   .project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  
+  border-radius: 10px;
+  overflow: hidden;
+  width: 200px;
+   border: 1px solid orange;
+  box-shadow: 0 0 5px rgb(226, 120, 63),
+  0 0 25px orange;
+  transition: transform 0.3s ease;
+ 
+}
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 60%;
+  height: auto;
+  display: center;
+  
+}
+.card-info {
+  position: absolute;
+  bottom: 0;
+  background: transparent;
+  width: 50%;
+  padding: 10px;
+  font-size: 14px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Show on hover or touch */
+.project-card:hover .card-info,
+.project-card.active .card-info {
+  transform: translateY(0);
+}
+  </style>
+</head>
+<body>
+  <h1>🎉 Welcome to Supermarket!</h1>
+  <p>Your account has been successfully created.</p>
+  <p>Click the supermarket to go to the website</p>
+    <a href="index.html">SuperMarket</a>
+
+  <section class="projects" id="projects">
+    <h1 class="section-title">Our<span>Products</span></h1>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="image1fruits/fruitbasket123.png" alt="Fruits" />
+          <div class="card-info">
+            <h3>Fruits</h3>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images2 vegetables/vegbas.png" alt="vegetables" />
+        <div class="card-info">
+           <h3>vegetables</h3>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images 3 chocolates/chocobasket.png" alt="Chocolates" />
+        <div class="card-info">
+           <h3>Chocolates</h3>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images4 freshjuices/freshjuices.png" alt="Fresh juices" />
+        <div class="card-info">
+           <h3>Fresh Juices</h3>
+        </div>
+      </div>
+    
+   
+    </div>
+  </section>
+</body>
+</html>

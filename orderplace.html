@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Place Order</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("image1fruits/cratenewbg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 20px;
+    }
+
+    .order-form-container {
+      max-width: 500px;
+      margin: auto;
+      background-image: url("image1fruits/headerbg.avif");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .order-form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .order-form-container input,
+    .order-form-container textarea,
+    .order-form-container select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: darkgreen;
+    }
+
+    .success-message {
+      display: none;
+      color: green;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="order-form-container">
+    <h2>📝 Order Details</h2>
+    <form id="orderForm">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="address" placeholder="Delivery Address" required>
+      <select name="location" required>
+        <option value="">Select Location</option>
+        <option value="Chennai">Tirunelveli</option>
+        <option value="Coimbatore">Coimbatore</option>
+        <option value="Madurai">Madurai</option>
+          <option value="Chennai">Chennai</option>
+        <option value="Coimbatore">tiruchy</option>
+        <option value="Madurai">kannyakumari</option>
+          <option value="Chennai">Thoothukudi</option>
+        <option value="Coimbatore">Thanjavur</option>
+        <option value="Madurai">salem</option>
+      </select>
+      <textarea name="notes" rows="3" placeholder="Order Notes (optional)"></textarea>
+      <input type="submit" value="Place Order" class="btn">
+    </form>
+    <div class="success-message" id="successMsg">
+      ✅ Your order has been placed successfully!
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("orderForm");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      successMsg.style.display = "block";
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
